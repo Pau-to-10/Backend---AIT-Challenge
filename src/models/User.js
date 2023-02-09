@@ -15,6 +15,11 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  uploads: [
+    {
+      type: String,
+    },
+  ],
 });
 
 userSchema.pre("save", async function (next) {
